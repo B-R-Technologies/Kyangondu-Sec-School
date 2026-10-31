@@ -3,209 +3,305 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Kyang'ondu mixed Secondary School</title>
+    <title>School Administration & Staff | Kyang'ondu Mixed Secondary School</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
+    <meta content="Kyang'ondu School Administration, Principal Mrs. Tabitha Nzuva, Deputy Principal Mr. Kennedy Ndungi, School Board Chairman, Makueni County High School Staff" name="keywords">
+    <meta content="Meet the dedicated leadership and administrative staff of Kyang'ondu Mixed Secondary School in Makueni County, committed to academic excellence and discipline." name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@300;500;700&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet"> 
 
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
-    <!-- Customized Bootstrap Stylesheet -->
+    <!-- Customized Bootstrap 5 Stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --bs-primary: #8d7244;
+            --bs-secondary: #8d7244;
+            --bs-accent: #ff9800;
+            --bs-font-sans: 'Plus Jakarta Sans', sans-serif;
+            --bs-font-heading: 'Outfit', sans-serif;
+        }
+
+        body {
+            font-family: var(--bs-font-sans);
+            color: #4a5568;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6, .navbar-brand {
+            font-family: var(--bs-font-heading);
+            font-weight: 700;
+        }
+
+        /* kyangondu-style Clean White Header */
+        .kyangondu-header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #eaeaea;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        .kyangondu-brand-title {
+            color: #8d7244;
+            font-size: 1.5rem;
+            letter-spacing: -0.5px;
+            line-height: 1.1;
+        }
+
+        .kyangondu-brand-subtitle {
+            font-size: 0.75rem;
+            letter-spacing: 2.5px;
+            color: #8d7244;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .kyangondu-nav .nav-link {
+            font-family: var(--bs-font-heading);
+            font-weight: 600;
+            color: #8d7244 !important;
+            font-size: 1.05rem;
+            padding: 0.5rem 0.8rem !important;
+            transition: opacity 0.2s;
+        }
+
+        .kyangondu-nav .nav-link:hover, 
+        .kyangondu-nav .nav-link.active {
+            opacity: 0.7;
+        }
+
+        /* Page Header Banner */
+        .bg-page-header {
+            background: linear-gradient(180deg, rgba(141, 114, 68, 0.85) 0%, rgba(11, 19, 41, 0.9) 100%), url('img/hall.jpg') center center no-repeat;
+            background-size: cover;
+        }
+
+        /* Modern Feature Cards */
+        .card-custom {
+            border: 1px solid #fff5e6;
+            background-color: #fff9f0;
+            border-radius: 1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-custom:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(141, 114, 68, 0.12);
+        }
+
+        .icon-square {
+            width: 64px;
+            height: 64px;
+            border-radius: 1rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(141, 114, 68, 0.1);
+            color: var(--bs-primary);
+        }
+
+        /* Owl Carousel Arrow Navigation Position Fix */
+        .carousel-wrapper {
+            position: relative;
+            padding: 0 45px;
+        }
+
+        .owl-carousel .owl-nav {
+            position: static !important;
+            margin-top: 0 !important;
+        }
+
+        .owl-carousel .owl-nav button.owl-prev,
+        .owl-carousel .owl-nav button.owl-next {
+            position: absolute !important;
+            top: 50% !important;
+            transform: translateY(-50%) !important;
+            width: 44px !important;
+            height: 44px !important;
+            border-radius: 50% !important;
+            background: #2b2b2b !important;
+            color: #ffffff !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            transition: all 0.3s ease !important;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15) !important;
+            z-index: 10 !important;
+            font-size: 1.1rem !important;
+        }
+
+        .owl-carousel .owl-nav button.owl-prev {
+            left: 0px !important;
+        }
+
+        .owl-carousel .owl-nav button.owl-next {
+            right: 0px !important;
+        }
+
+        .owl-carousel .owl-nav button.owl-prev:hover,
+        .owl-carousel .owl-nav button.owl-next:hover {
+            background: var(--bs-primary) !important;
+            color: #ffffff !important;
+        }
+
+        /* Footer Modernization */
+        footer {
+            background-color: #0b1329;
+        }
+        footer a {
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+        footer a:hover {
+            opacity: 0.8;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-3 bg-secondary d-none d-lg-block">
-                <a href="index.html" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
-                    <h1 class="m-0 text-primary text-uppercase fs-3 fs-md-2 fs-lg-1 text-center">Kyang'ondu <br> School</h1>
+    <!-- kyangondu-Style Clean Header Start -->
+    <header class="kyangondu-header sticky-top shadow-sm">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg p-0 justify-content-between align-items-center">
+                <a href="index.html" class="navbar-brand d-flex flex-column m-0 text-decoration-none">
+                    <span class="kyangondu-brand-title fw-bold">Kyang'ondu School</span>
+                    <span class="kyangondu-brand-subtitle">Excellence & Discipline</span>
                 </a>
-            </div>
-            <div class="col-lg-9">
-                <div class="row bg-white border-bottom d-none d-lg-flex">
-                    <div class="col-lg-7 text-left">
-                        <div class="h-100 d-inline-flex align-items-center py-2 px-3">
-                            <i class="fa fa-envelope text-primary mr-2"></i>
-                            <small>kyangondusecschool@gmail.com</small>
-                        </div>
-                        <div class="h-100 d-inline-flex align-items-center py-2 px-2">
-                            <i class="fa fa-phone-alt text-primary mr-2"></i>
-                            <small>0710864334</small>
-                        </div>
-                    </div>
-                    <div class="col-lg-5 text-right">
-                        <div class="d-inline-flex align-items-center p-2">
-                            <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <nav class="navbar navbar-expand-lg bg-white navbar-light p-0">
-                    <a href="index.html" class="navbar-brand d-block d-lg-none">
-                        <h3 class="m-0 display-4 text-primary text-uppercase">Kyang'ondu <br> School </h3>
-                    </a>
-                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                        <div class="navbar-nav mr-auto py-0">
-                            <a href="index.html" class="nav-item nav-link active">Home</a>
-                            <a href="about.html" class="nav-item nav-link">About us</a>
-                            <a href="service.html" class="nav-item nav-link">Clubs and Co-curricular Activities</a>
-                            <a href="team.html" class="nav-item nav-link">Administration</a>
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Classes</a>
-                                <div class="dropdown-menu rounded-0 m-0">
-                                    <a href="#" class="dropdown-item">Form 1</a>
-                                    <a href="#" class="dropdown-item">Form 2</a>
-                                    <a href="#" class="dropdown-item">Form 3</a>
-                                    <a href="#" class="dropdown-item">Form 4</a>
-                                </div>
-                            </div>
-                            <a href="contact.html" class="nav-item nav-link">Contact us</a>
-                        </div>
-                        <a href="#footer" class="btn btn-primary mr-3 d-none d-lg-block">Our contacts</a>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </div>
 
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+                    <ul class="navbar-nav kyangondu-nav align-items-lg-center mb-2 mb-lg-0 gap-lg-2">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                        <li class="nav-item"><a href="team.html" class="nav-link active">Administration</a></li>
+                        <li class="nav-item"><a href="service.html" class="nav-link">Clubs & Co-curricular</a></li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" id="classesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Classes</a>
+                            <ul class="dropdown-menu border-0 shadow-lg rounded-3" aria-labelledby="classesDropdown">
+                                <li><a href="#" class="dropdown-item py-2">Form 1 Admission</a></li>
+                                <li><a href="#" class="dropdown-item py-2">Form 2</a></li>
+                                <li><a href="#" class="dropdown-item py-2">Form 3</a></li>
+                                <li><a href="#" class="dropdown-item py-2">Form 4 (KCSE Class)</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- Header End -->
 
     <!-- Page Header Start -->
-    <div class="container-fluid bg-page-header" style="margin-bottom: 90px;">
-        <div class="container">
-            <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
-                <h3 class="display-3 text-white text-uppercase">Administration</h3>
-                <div class="d-inline-flex text-white">
-                    <p class="m-0 text-uppercase"><a class="text-white" href="">Home</a></p>
+    <div class="container-fluid bg-page-header py-5 mb-5">
+        <div class="container py-5">
+            <div class="d-flex flex-column align-items-center justify-content-center text-center" style="min-height: 250px">
+                <h1 class="display-3 text-white text-uppercase fw-bold">School Administration</h1>
+                <div class="d-inline-flex text-white mt-2">
+                    <p class="m-0 text-uppercase"><a class="text-white text-decoration-none" href="index.html">Home</a></p>
                     <i class="fa fa-angle-double-right pt-1 px-3"></i>
-                    <p class="m-0 text-uppercase">Our administration</p>
+                    <p class="m-0 text-uppercase text-warning">Administration</p>
                 </div>
             </div>
         </div>
     </div>
     <!-- Page Header End -->
 
-
     <!-- Team Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="text-center pb-2">
-                <!-- <h6 class="text-uppercase">Meet our staff</h6> -->
-                <h1 class="mb-4">Meet our staff</h1>
+    <section class="container-fluid py-5">
+        <div class="container py-4">
+            <div class="text-center pb-5">
+                <span class="text-primary fw-bold text-uppercase">Leadership & Faculty</span>
+                <h2 class="display-6 fw-bold text-dark mt-2">Meet Our Dedicated School Staff</h2>
             </div>
             <div class="row">
                 <div class="col-12">
-                    <div class="bg-primary rounded" style="height: 200px;"></div>
-                    <div class="owl-carousel team-carousel position-relative" style="margin-top: -97px; padding: 0 30px;">
-                        <div class="team-item text-center bg-white rounded overflow-hidden pt-4">
-                            <h5 class="mb-2 px-4">Principal</h5>
-                            <p class="mb-3 px-4">Mrs. Tabitha Nzuva </p>
-                            <div class="team-img position-relative">
-                                <img class="img-fluid" src="img/femaleicon.png" alt="">
-                                <div class="team-social">
-                                    <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <div class="carousel-wrapper">
+                        <div class="owl-carousel team-carousel position-relative">
+                            <div class="card-custom text-center p-4 h-100 bg-white">
+                                <img class="img-fluid rounded-circle mx-auto mb-3" src="img/femaleicon.png" style="width: 120px; height: 120px; object-fit: cover;" alt="Principal of Kyang'ondu Secondary School, Mrs. Tabitha Nzuva">
+                                <h5 class="fw-bold mb-1">Mrs. Tabitha Nzuva</h5>
+                                <p class="text-primary fw-semibold small mb-3">Principal</p>
+                                <div class="d-flex justify-content-center gap-2">
+                                    <a class="btn btn-outline-dark btn-sm rounded-circle" href="#"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-outline-dark btn-sm rounded-circle" href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-outline-dark btn-sm rounded-circle" href="#"><i class="fab fa-linkedin-in"></i></a>
                                 </div>
                             </div>
-                        </div>
-                        <div class="team-item text-center bg-white rounded overflow-hidden pt-4">
-                            <h5 class="mb-2 px-4">Deputy principal</h5>
-                            <p class="mb-3 px-4">Mr. Kennedy Ndungi</p>
-                            <div class="team-img position-relative">
-                                <img class="img-fluid" src="img/maleicon.png" alt="">
-                                <div class="team-social">
-                                    <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <div class="card-custom text-center p-4 h-100 bg-white">
+                                <img class="img-fluid rounded-circle mx-auto mb-3" src="img/maleicon.png" style="width: 120px; height: 120px; object-fit: cover;" alt="Deputy Principal of Kyang'ondu Secondary School, Mr. Kennedy Ndungi">
+                                <h5 class="fw-bold mb-1">Mr. Kennedy Ndungi</h5>
+                                <p class="text-primary fw-semibold small mb-3">Deputy Principal</p>
+                                <div class="d-flex justify-content-center gap-2">
+                                    <a class="btn btn-outline-dark btn-sm rounded-circle" href="#"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-outline-dark btn-sm rounded-circle" href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-outline-dark btn-sm rounded-circle" href="#"><i class="fab fa-linkedin-in"></i></a>
                                 </div>
                             </div>
-                        </div>
-                        <div class="team-item text-center bg-white rounded overflow-hidden pt-4">
-                            <h5 class="mb-2 px-4">Director of Studies</h5>
-                            <p class="mb-3 px-4">Mr. Attanasius Kivindu </p>
-                            <div class="team-img position-relative">
-                                <img class="img-fluid" src="img/maleicon.png" alt="">
-                                <div class="team-social">
-                                    <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <div class="card-custom text-center p-4 h-100 bg-white">
+                                <img class="img-fluid rounded-circle mx-auto mb-3" src="img/maleicon.png" style="width: 120px; height: 120px; object-fit: cover;" alt="Director of Studies, Kyang'ondu Secondary School, Mr. Attanasius Kivindu">
+                                <h5 class="fw-bold mb-1">Mr. Attanasius Kivindu</h5>
+                                <p class="text-primary fw-semibold small mb-3">Director of Studies</p>
+                                <div class="d-flex justify-content-center gap-2">
+                                    <a class="btn btn-outline-dark btn-sm rounded-circle" href="#"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-outline-dark btn-sm rounded-circle" href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-outline-dark btn-sm rounded-circle" href="#"><i class="fab fa-linkedin-in"></i></a>
                                 </div>
                             </div>
-                        </div>
-                        <div class="team-item text-center bg-white rounded overflow-hidden pt-4">
-                            <h5 class="mb-2 px-4">Boarding Mistress</h5>
-                            <p class="mb-3 px-4">Ms. Everlyn John </p>
-                            <div class="team-img position-relative">
-                                <img class="img-fluid" src="img/femaleicon.png" alt="">
-                                <div class="team-social">
-                                    <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <div class="card-custom text-center p-4 h-100 bg-white">
+                                <img class="img-fluid rounded-circle mx-auto mb-3" src="img/femaleicon.png" style="width: 120px; height: 120px; object-fit: cover;" alt="Boarding Mistress, Kyang'ondu Secondary School, Ms. Everlyn John">
+                                <h5 class="fw-bold mb-1">Ms. Everlyn John</h5>
+                                <p class="text-primary fw-semibold small mb-3">Boarding Mistress</p>
+                                <div class="d-flex justify-content-center gap-2">
+                                    <a class="btn btn-outline-dark btn-sm rounded-circle" href="#"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-outline-dark btn-sm rounded-circle" href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-outline-dark btn-sm rounded-circle" href="#"><i class="fab fa-linkedin-in"></i></a>
                                 </div>
                             </div>
-                        </div>
-                        <div class="team-item text-center bg-white rounded overflow-hidden pt-4">
-                            <h5 class="mb-2 px-4">Senior teacher</h5>
-                            <p class="mb-3 px-4">Mrs. Agnes Muthama </p>
-                            <div class="team-img position-relative">
-                                <img class="img-fluid" src="img/femaleicon.png" alt="">
-                                <div class="team-social">
-                                    <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <div class="card-custom text-center p-4 h-100 bg-white">
+                                <img class="img-fluid rounded-circle mx-auto mb-3" src="img/femaleicon.png" style="width: 120px; height: 120px; object-fit: cover;" alt="Senior Teacher, Kyang'ondu Secondary School, Mrs. Agnes Muthama">
+                                <h5 class="fw-bold mb-1">Mrs. Agnes Muthama</h5>
+                                <p class="text-primary fw-semibold small mb-3">Senior Teacher</p>
+                                <div class="d-flex justify-content-center gap-2">
+                                    <a class="btn btn-outline-dark btn-sm rounded-circle" href="#"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-outline-dark btn-sm rounded-circle" href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-outline-dark btn-sm rounded-circle" href="#"><i class="fab fa-linkedin-in"></i></a>
                                 </div>
                             </div>
-                        </div>
-                                                <div class="team-item text-center bg-white rounded overflow-hidden pt-4">
-                            <h5 class="mb-2 px-4">Board Chairman</h5>
-                            <p class="mb-3 px-4">Eng. James Mbuva</p>
-                            <div class="team-img position-relative">
-                                <img class="img-fluid" src="img/maleicon.png" alt="">
-                                <div class="team-social">
-                                    <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <div class="card-custom text-center p-4 h-100 bg-white">
+                                <img class="img-fluid rounded-circle mx-auto mb-3" src="img/maleicon.png" style="width: 120px; height: 120px; object-fit: cover;" alt="Board Chairman of Kyang'ondu Secondary School, Eng. James Mbuva">
+                                <h5 class="fw-bold mb-1">Eng. James Mbuva</h5>
+                                <p class="text-primary fw-semibold small mb-3">Board Chairman</p>
+                                <div class="d-flex justify-content-center gap-2">
+                                    <a class="btn btn-outline-dark btn-sm rounded-circle" href="#"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-outline-dark btn-sm rounded-circle" href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-outline-dark btn-sm rounded-circle" href="#"><i class="fab fa-linkedin-in"></i></a>
                                 </div>
                             </div>
-                        </div>
-                                                <div class="team-item text-center bg-white rounded overflow-hidden pt-4">
-                            <h5 class="mb-2 px-4">Chaplain</h5>
-                            <p class="mb-3 px-4">Rev. James Kilinda</p>
-                            <div class="team-img position-relative">
-                                <img class="img-fluid" src="img/maleicon.png" alt="">
-                                <div class="team-social">
-                                    <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <div class="card-custom text-center p-4 h-100 bg-white">
+                                <img class="img-fluid rounded-circle mx-auto mb-3" src="img/maleicon.png" style="width: 120px; height: 120px; object-fit: cover;" alt="Chaplain of Kyang'ondu Secondary School, Rev. James Kilinda">
+                                <h5 class="fw-bold mb-1">Rev. James Kilinda</h5>
+                                <p class="text-primary fw-semibold small mb-3">Chaplain</p>
+                                <div class="d-flex justify-content-center gap-2">
+                                    <a class="btn btn-outline-dark btn-sm rounded-circle" href="#"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-outline-dark btn-sm rounded-circle" href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-outline-dark btn-sm rounded-circle" href="#"><i class="fab fa-linkedin-in"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -213,223 +309,157 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <!-- Team End -->
 
-
-    <!-- Appointment Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="bg-appointment rounded">
-                <div class="row h-100 align-items-center justify-content-center">
-                    <div class="col-lg-6 py-5">
-                        <div class="rounded p-5 my-5" style="background: rgba(55, 55, 63, .7);">
-                            <h1 class="text-center text-white mb-4">Contact us</h1>
-                            <form>
-                                <div class="form-group">
-                                    <input type="text" class="form-control border-0 p-4" placeholder="Your Name" required="required" />
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control border-0 p-4" placeholder="Your Email" required="required" />
-                                </div>
-                                <div class="form-row">
-                                    <div class="col-6">
-                                        <div class="form-group">
-                                            <div class="date" id="date" data-target-input="nearest">
-                                                <input type="text" class="form-control border-0 p-4 datetimepicker-input" placeholder="Select Date" data-target="#date" data-toggle="datetimepicker"/>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="form-group">
-                                            <div class="time" id="time" data-target-input="nearest">
-                                                <input type="text" class="form-control border-0 p-4 datetimepicker-input" placeholder="Select Time" data-target="#time" data-toggle="datetimepicker"/>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <select class="custom-select border-0 px-4" style="height: 47px;">
-                                        <option selected>Admission</option>
-                                        <option value="1">Appointment with a teacher</option>
-                                        <option value="2">School visit</option>
-                                        <option value="3">Other</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <button class="btn btn-primary btn-block border-0 py-3" type="submit">Get An Appointment</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Appointment End -->
-
-
     <!-- Features Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="row">
-                <div class="col-lg-6" style="min-height: 500px;">
-                    <div class="position-relative h-100 rounded overflow-hidden">
-                        <img class="position-absolute w-100 h-100" src="img/classp.jpg" style="object-fit: cover;">
+    <section class="container-fluid py-5 bg-light">
+        <div class="container py-4">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6" style="min-height: 450px;">
+                    <div class="position-relative h-100 rounded-4 overflow-hidden shadow">
+                        <img class="position-absolute w-100 h-100" src="img/classp.jpg" style="object-fit: cover;" alt="Students participating in a group class discussion at Kyang'ondu School">
                     </div>
                 </div>
-                <div class="col-lg-6 pt-5 pb-lg-5">
-                    <div class="feature-text bg-white rounded p-lg-5">
-                        <!-- <h6 class="text-uppercase">Our School</h6> -->
-                        <h1 class="mb-4">Our school</h1>
-                        <div class="d-flex mb-4">
-                            <div class="btn-primary btn-lg-square px-3" style="border-radius: 50px;">
-                                <h5 class="text-secondary m-0">01</h5>
-                            </div>
-                            <div class="ml-4">
-                                <h5>Our mission</h5>
-                                <p class="m-0">To produce citizens who make this country to a better place than they found it</p>
-                            </div>
+                <div class="col-lg-6">
+                    <span class="text-primary fw-bold text-uppercase">Our Foundations</span>
+                    <h2 class="fw-bold text-dark mt-2 mb-4">Mission, Vision & Core Values</h2>
+                    
+                    <div class="d-flex gap-3 mb-4">
+                        <div class="icon-square flex-shrink-0">
+                            <span class="fw-bold fs-4">01</span>
                         </div>
-                        <div class="d-flex mb-4">
-                            <div class="btn-primary btn-lg-square px-3" style="border-radius: 50px;">
-                                <h5 class="text-secondary m-0">02</h5>
-                            </div>
-                            <div class="ml-4">
-                                <h5>Our vision</h5>
-                                <p class="m-0">To be a center of academic excellence, discipline, and sportsmanship.</p>
-                            </div>
+                        <div>
+                            <h5 class="fw-bold text-dark">Our Mission</h5>
+                            <p class="text-muted mb-0">To produce citizens who make this country a better place than they found it.</p>
                         </div>
-                        <div class="d-flex">
-                            <div class="btn-primary btn-lg-square px-3" style="border-radius: 50px;">
-                                <h5 class="text-secondary m-0">03</h5>
-                            </div>
-                            <div class="ml-4">
-                                <h5>Our core values</h5>
-                                <p class="m-2">
-                                    <li style="margin-left: 40px;">Humility</li>
-                                    <li style="margin-left: 40px;">Discipline</li>
-                                    <li style="margin-left: 40px;">Integrity</li>
-                                    <li style="margin-left: 40px;">Humility</li>
-                                    <li style="margin-left: 40px;">Efficiency</li>
-                                    <li style="margin-left: 40px;">Cooperation</li>
-                                </p>
+                    </div>
+
+                    <div class="d-flex gap-3 mb-4">
+                        <div class="icon-square flex-shrink-0">
+                            <span class="fw-bold fs-4">02</span>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold text-dark">Our Vision</h5>
+                            <p class="text-muted mb-0">To be a center of academic excellence, discipline, and sportsmanship.</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex gap-3">
+                        <div class="icon-square flex-shrink-0">
+                            <span class="fw-bold fs-4">03</span>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold text-dark">Our Core Values</h5>
+                            <div class="d-flex flex-wrap gap-2 mt-2">
+                                <span class="badge bg-white text-dark border px-3 py-2 rounded-pill">Humility</span>
+                                <span class="badge bg-white text-dark border px-3 py-2 rounded-pill">Discipline</span>
+                                <span class="badge bg-white text-dark border px-3 py-2 rounded-pill">Integrity</span>
+                                <span class="badge bg-white text-dark border px-3 py-2 rounded-pill">Efficiency</span>
+                                <span class="badge bg-white text-dark border px-3 py-2 rounded-pill">Cooperation</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <!-- Features End -->
 
-
     <!-- Footer Start -->
-    <div id="footer" class="container-fluid bg-secondary text-white pt-5 px-sm-3 px-md-5" style="margin-top: 90px;">
-        <div class="row mt-5">
-            <div class="col-lg-4">
-                <div class="d-flex justify-content-lg-center p-4" style="background: rgba(256, 256, 256, .05);">
-                    <i class="fa fa-2x fa-map-marker-alt text-primary"></i>
-                    <div class="ml-3">
-                        <h5 class="text-white">Location</h5>
-                        <p class="m-0">Makueni County, Mbooni East Sub-County, Kako / Waia Ward along Masii-Tawa-Kaumoni Road</p>
+    <footer id="footer" class="text-white pt-5">
+        <div class="container py-4">
+            <div class="row g-4 pb-5 border-bottom border-secondary">
+                <div class="col-lg-4">
+                    <div class="d-flex align-items-start gap-3">
+                        <i class="fa fa-map-marker-alt text-warning fs-3 mt-1"></i>
+                        <div>
+                            <h6 class="fw-bold mb-1">Our Location</h6>
+                            <p class="small text-white-50 mb-0">Makueni County, Mbooni East Sub-County, Kako / Waia Ward along Masii-Tawa-Kaumoni Road.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="d-flex justify-content-lg-center p-4" style="background: rgba(256, 256, 256, .05);">
-                    <i class="fa fa-2x fa-envelope-open text-primary"></i>
-                    <div class="ml-3">
-                        <h5 class="text-white">Email Us</h5>
-                        <p class="m-0">kyangondusecschool@gmail.com</p>
+                <div class="col-lg-4">
+                    <div class="d-flex align-items-start gap-3">
+                        <i class="fa fa-envelope text-warning fs-3 mt-1"></i>
+                        <div>
+                            <h6 class="fw-bold mb-1">Email Us</h6>
+                            <p class="small text-white-50 mb-0">kyangondusecschool@gmail.com</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="d-flex justify-content-lg-center p-4" style="background: rgba(256, 256, 256, .05);">
-                    <i class="fa fa-2x fa-phone-alt text-primary"></i>
-                    <div class="ml-3">
-                        <h5 class="text-white">Call Us</h5>
-                        <p class="m-0">0710864334</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row pt-5">
-            <div class="col-lg-3 col-md-6 mb-5">
-                <a href="index.html" class="navbar-brand">
-                    <h1 class="m-0 mt-n2 display-4 text-primary text-uppercase">Kyang'ondu <br> School</h1>
-                </a>
-                <p>We are a symbol of hope, opportunity, and academic achievement for generations in Kenya</p>
-                <div class="d-flex justify-content-start mt-4">
-                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-lg btn-outline-light btn-lg-square" href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="font-weight-semi-bold text-primary mb-4">Popular Links</h4>
-                <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                    <a class="text-white mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>About</a>
-                    <a class="text-white mb-2" href="service.html"><i class="fa fa-angle-right mr-2"></i>Services</a>
-                    <a class="text-white" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contact</a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="font-weight-semi-bold text-primary mb-4">Quick Links</h4>
-                <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>FAQs</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Help</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Terms</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Privacy</a>
-                    <!-- <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Site Map</a> -->
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="font-weight-semi-bold text-primary mb-4">Newsletter</h4>
-                <p>Subscribe to our monthly newsletter and stay informed about school events, academic updates, student achievements, and important announcements.
-                    We promise not to flood your inbox just inspiring stories and updates that matter to our school community.</p>
-                <div class="w-100">
-                    <div class="input-group">
-                        <input type="text" class="form-control border-0" style="padding: 25px;" placeholder="Your Email">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary px-4">Sign Up</button>
+                <div class="col-lg-4">
+                    <div class="d-flex align-items-start gap-3">
+                        <i class="fa fa-phone-alt text-warning fs-3 mt-1"></i>
+                        <div>
+                            <h6 class="fw-bold mb-1">Call Us Directly</h6>
+                            <p class="small text-white-50 mb-0">0710864334</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row p-4 mt-5 mx-0" style="background: rgba(256, 256, 256, .05);">
-            <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
-                <p class="m-0 text-white">&copy; <a class="font-weight-bold" href="#">Kyang'ondu school</a>. All Rights Reserved.</p>
-            </div>
-            <div class="col-md-6 text-center text-md-right">
-                <p class="m-0 text-white">Designed by <a class="font-weight-bold" href="https://www.brtechnologies.co.ke/">B&R Technologies</a></p>
-            </div>
-        </div>
-    </div>
-    <!-- Footer End -->
 
+            <div class="row g-4 py-5">
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="fw-bold text-white mb-3">Kyang'ondu School</h4>
+                    <p class="text-white-50 small mb-4">We are a symbol of hope, opportunity, and academic achievement for generations in Kenya, serving as a leading mixed secondary school in Makueni County.</p>
+                    <div class="d-flex gap-2">
+                        <a class="btn btn-outline-light btn-sm rounded-circle" href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-sm rounded-circle" href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-sm rounded-circle" href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-sm rounded-circle" href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold text-white mb-3">Quick Navigation</h6>
+                    <ul class="list-unstyled text-white-50 small d-flex flex-column gap-2">
+                        <li><a href="index.html" class="text-white-50">Home</a></li>
+                        <li><a href="about.html" class="text-white-50">About Us</a></li>
+                        <li><a href="service.html" class="text-white-50">Clubs & Services</a></li>
+                        <li><a href="contact.html" class="text-white-50">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold text-white mb-3">Resources</h6>
+                    <ul class="list-unstyled text-white-50 small d-flex flex-column gap-2">
+                        <li><a href="#" class="text-white-50">Admissions FAQ</a></li>
+                        <li><a href="#" class="text-white-50">School Rules</a></li>
+                        <li><a href="#" class="text-white-50">Terms of Use</a></li>
+                        <li><a href="#" class="text-white-50">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="fw-bold text-white mb-3">Newsletter</h6>
+                    <p class="text-white-50 small mb-3">Subscribe to stay updated with school events and KCSE achievements.</p>
+                    <form class="input-group">
+                        <input type="email" class="form-control border-0" placeholder="Your Email" aria-label="Your Email" required>
+                        <button class="btn btn-primary" type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row py-3 border-top border-secondary text-center text-md-between small text-white-50">
+                <div class="col-md-6 text-md-start">
+                    <p class="mb-0">&copy; Kyang'ondu Secondary School. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end mt-2 mt-md-0">
+                    <p class="mb-0">Designed by <a class="text-warning text-decoration-none" href="https://www.brtechnologies.co.ke/" target="_blank">B&R Technologies</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-primary px-3 back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
-
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/tempusdominus/js/moment.min.js"></script>
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-
-    <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>

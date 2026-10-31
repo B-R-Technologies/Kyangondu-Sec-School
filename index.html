@@ -99,13 +99,14 @@
 
         /* Modern Feature Cards */
         .card-custom {
-            border: 1px solid #edf2f7;
+            border: 1px solid #fff5e6;
+            background-color: #fff9f0;
             border-radius: 1rem;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .card-custom:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            box-shadow: 0 15px 30px rgba(141, 114, 68, 0.12);
         }
 
         .icon-square {
@@ -115,14 +116,52 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            background: rgba(13, 71, 161, 0.1);
+            background: rgba(141, 114, 68, 0.1);
             color: var(--bs-primary);
         }
 
-        /* Form Styling */
-        .form-control-lg, .form-select-lg {
-            border-radius: 0.5rem;
-            font-size: 1rem;
+        /* Owl Carousel Arrow Navigation Position Fix */
+        .carousel-wrapper {
+            position: relative;
+            padding: 0 45px;
+        }
+
+        .owl-carousel .owl-nav {
+            position: static !important;
+            margin-top: 0 !important;
+        }
+
+        .owl-carousel .owl-nav button.owl-prev,
+        .owl-carousel .owl-nav button.owl-next {
+            position: absolute !important;
+            top: 50% !important;
+            transform: translateY(-50%) !important;
+            width: 44px !important;
+            height: 44px !important;
+            border-radius: 50% !important;
+            background: #2b2b2b !important;
+            color: #ffffff !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            transition: all 0.3s ease !important;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15) !important;
+            z-index: 10 !important;
+            font-size: 1.1rem !important;
+        }
+
+        .owl-carousel .owl-nav button.owl-prev {
+            left: 0px !important;
+        }
+
+        .owl-carousel .owl-nav button.owl-next {
+            right: 0px !important;
+        }
+
+        .owl-carousel .owl-nav button.owl-prev:hover,
+        .owl-carousel .owl-nav button.owl-next:hover {
+            background: var(--bs-primary) !important;
+            color: #ffffff !important;
         }
 
         /* Footer Modernization */
@@ -135,13 +174,6 @@
         }
         footer a:hover {
             opacity: 0.8;
-        }
-
-        /* Glassmorphism Accents */
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
         }
     </style>
 </head>
@@ -282,7 +314,7 @@
                 <div class="col-lg-8">
                     <div class="row g-4">
                         <div class="col-md-6">
-                            <div class="card-custom p-4 bg-white h-100">
+                            <div class="card-custom p-4 h-100">
                                 <div class="icon-square mb-3">
                                     <i class="fa fa-2x fa-landmark"></i>
                                 </div>
@@ -291,7 +323,7 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="card-custom p-4 bg-white h-100">
+                            <div class="card-custom p-4 h-100">
                                 <div class="icon-square mb-3">
                                     <i class="fa fa-2x fa-atom"></i>
                                 </div>
@@ -300,7 +332,7 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="card-custom p-4 bg-white h-100">
+                            <div class="card-custom p-4 h-100">
                                 <div class="icon-square mb-3">
                                     <i class="fa fa-2x fa-theater-masks"></i>
                                 </div>
@@ -309,7 +341,7 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="card-custom p-4 bg-white h-100">
+                            <div class="card-custom p-4 h-100">
                                 <div class="icon-square mb-3">
                                     <i class="fa fa-2x fa-newspaper"></i>
                                 </div>
@@ -317,49 +349,6 @@
                                 <p class="text-muted mb-0">Developing writing, photography, and storytelling skills for the school newsletter.</p>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Appointment / Contact Section -->
-    <section class="py-5 bg-primary text-white position-relative overflow-hidden" style="background: linear-gradient(135deg, #8d7244 0%, #8d7244 100%);">
-        <div class="container py-4">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center mb-4">
-                    <h2 class="display-6 fw-bold text-white">Contact Us for Admissions & Enquiries</h2>
-                    <p class="text-white-50">Book an appointment or send us a request directly online.</p>
-                </div>
-                <div class="col-lg-8">
-                    <div class="glass-panel p-4 p-md-5 rounded-4 shadow">
-                        <form>
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control form-control-lg border-0" placeholder="Your Name" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="email" class="form-control form-control-lg border-0" placeholder="Your Email" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="date" class="form-control form-control-lg border-0" aria-label="Appointment Date">
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="time" class="form-control form-control-lg border-0" aria-label="Appointment Time">
-                                </div>
-                                <div class="col-12">
-                                    <select class="form-select form-select-lg border-0" aria-label="Enquiry Category">
-                                        <option selected>2024 Secondary School Admission (Form 1)</option>
-                                        <option value="1">Appointment with a teacher</option>
-                                        <option value="2">School visit/Tour</option>
-                                        <option value="3">Other Enquiry</option>
-                                    </select>
-                                </div>
-                                <div class="col-12 mt-4">
-                                    <button class="btn btn-warning btn-lg w-100 rounded-pill fw-bold text-dark py-3" type="submit">Book An Appointment</button>
-                                </div>
-                            </div>
-                        </form>
                     </div>
                 </div>
             </div>
@@ -423,46 +412,48 @@
     <!-- Staff Section -->
     <section class="py-5">
         <div class="container py-4">
-            <div class="text-center mb-5">
+            <div class="text-center mb-4">
                 <span class="text-primary fw-bold text-uppercase">Leadership</span>
                 <h2 class="fw-bold text-dark mt-2">Meet Our Dedicated School Leadership</h2>
             </div>
             
-            <div class="owl-carousel team-carousel">
-                <div class="card-custom bg-white text-center p-4 h-100">
-                    <img class="img-fluid rounded-circle mx-auto mb-3" src="img/femaleicon.png" style="width: 120px; height: 120px; object-fit: cover;" alt="Principal of Kyang'ondu Secondary School, Mrs. Tabitha Nzuva">
-                    <h5 class="fw-bold mb-1">Mrs. Tabitha Nzuva</h5>
-                    <p class="text-primary fw-semibold small mb-3">Principal</p>
-                </div>
-                <div class="card-custom bg-white text-center p-4 h-100">
-                    <img class="img-fluid rounded-circle mx-auto mb-3" src="img/maleicon.png" style="width: 120px; height: 120px; object-fit: cover;" alt="Deputy Principal of Kyang'ondu Secondary School, Mr. Kennedy Ndungi">
-                    <h5 class="fw-bold mb-1">Mr. Kennedy Ndungi</h5>
-                    <p class="text-primary fw-semibold small mb-3">Deputy Principal</p>
-                </div>
-                <div class="card-custom bg-white text-center p-4 h-100">
-                    <img class="img-fluid rounded-circle mx-auto mb-3" src="img/maleicon.png" style="width: 120px; height: 120px; object-fit: cover;" alt="Director of Studies, Kyang'ondu Secondary School, Mr. Attanasius Kivindu">
-                    <h5 class="fw-bold mb-1">Mr. Attanasius Kivindu</h5>
-                    <p class="text-primary fw-semibold small mb-3">Director of Studies</p>
-                </div>
-                <div class="card-custom bg-white text-center p-4 h-100">
-                    <img class="img-fluid rounded-circle mx-auto mb-3" src="img/femaleicon.png" style="width: 120px; height: 120px; object-fit: cover;" alt="Boarding Mistress, Kyang'ondu Secondary School, Ms. Everlyn John">
-                    <h5 class="fw-bold mb-1">Ms. Everlyn John</h5>
-                    <p class="text-primary fw-semibold small mb-3">Boarding Mistress</p>
-                </div>
-                <div class="card-custom bg-white text-center p-4 h-100">
-                    <img class="img-fluid rounded-circle mx-auto mb-3" src="img/femaleicon.png" style="width: 120px; height: 120px; object-fit: cover;" alt="Senior Teacher, Kyang'ondu Secondary School, Mrs. Agnes Muthama">
-                    <h5 class="fw-bold mb-1">Mrs. Agnes Muthama</h5>
-                    <p class="text-primary fw-semibold small mb-3">Senior Teacher</p>
-                </div>
-                <div class="card-custom bg-white text-center p-4 h-100">
-                    <img class="img-fluid rounded-circle mx-auto mb-3" src="img/maleicon.png" style="width: 120px; height: 120px; object-fit: cover;" alt="Board Chairman of Kyang'ondu Secondary School, Eng. James Mbuva">
-                    <h5 class="fw-bold mb-1">Eng. James Mbuva</h5>
-                    <p class="text-primary fw-semibold small mb-3">Board Chairman</p>
-                </div>
-                <div class="card-custom bg-white text-center p-4 h-100">
-                    <img class="img-fluid rounded-circle mx-auto mb-3" src="img/maleicon.png" style="width: 120px; height: 120px; object-fit: cover;" alt="Chaplain of Kyang'ondu Secondary School, Rev. James Kilinda">
-                    <h5 class="fw-bold mb-1">Rev. James Kilinda</h5>
-                    <p class="text-primary fw-semibold small mb-3">Chaplain</p>
+            <div class="carousel-wrapper">
+                <div class="owl-carousel team-carousel">
+                    <div class="card-custom text-center p-4 h-100">
+                        <img class="img-fluid rounded-circle mx-auto mb-3" src="img/femaleicon.png" style="width: 120px; height: 120px; object-fit: cover;" alt="Principal of Kyang'ondu Secondary School, Mrs. Tabitha Nzuva">
+                        <h5 class="fw-bold mb-1">Mrs. Tabitha Nzuva</h5>
+                        <p class="text-primary fw-semibold small mb-0">Principal</p>
+                    </div>
+                    <div class="card-custom text-center p-4 h-100">
+                        <img class="img-fluid rounded-circle mx-auto mb-3" src="img/maleicon.png" style="width: 120px; height: 120px; object-fit: cover;" alt="Deputy Principal of Kyang'ondu Secondary School, Mr. Kennedy Ndungi">
+                        <h5 class="fw-bold mb-1">Mr. Kennedy Ndungi</h5>
+                        <p class="text-primary fw-semibold small mb-0">Deputy Principal</p>
+                    </div>
+                    <div class="card-custom text-center p-4 h-100">
+                        <img class="img-fluid rounded-circle mx-auto mb-3" src="img/maleicon.png" style="width: 120px; height: 120px; object-fit: cover;" alt="Director of Studies, Kyang'ondu Secondary School, Mr. Attanasius Kivindu">
+                        <h5 class="fw-bold mb-1">Mr. Attanasius Kivindu</h5>
+                        <p class="text-primary fw-semibold small mb-0">Director of Studies</p>
+                    </div>
+                    <div class="card-custom text-center p-4 h-100">
+                        <img class="img-fluid rounded-circle mx-auto mb-3" src="img/femaleicon.png" style="width: 120px; height: 120px; object-fit: cover;" alt="Boarding Mistress, Kyang'ondu Secondary School, Ms. Everlyn John">
+                        <h5 class="fw-bold mb-1">Ms. Everlyn John</h5>
+                        <p class="text-primary fw-semibold small mb-0">Boarding Mistress</p>
+                    </div>
+                    <div class="card-custom text-center p-4 h-100">
+                        <img class="img-fluid rounded-circle mx-auto mb-3" src="img/femaleicon.png" style="width: 120px; height: 120px; object-fit: cover;" alt="Senior Teacher, Kyang'ondu Secondary School, Mrs. Agnes Muthama">
+                        <h5 class="fw-bold mb-1">Mrs. Agnes Muthama</h5>
+                        <p class="text-primary fw-semibold small mb-0">Senior Teacher</p>
+                    </div>
+                    <div class="card-custom text-center p-4 h-100">
+                        <img class="img-fluid rounded-circle mx-auto mb-3" src="img/maleicon.png" style="width: 120px; height: 120px; object-fit: cover;" alt="Board Chairman of Kyang'ondu Secondary School, Eng. James Mbuva">
+                        <h5 class="fw-bold mb-1">Eng. James Mbuva</h5>
+                        <p class="text-primary fw-semibold small mb-0">Board Chairman</p>
+                    </div>
+                    <div class="card-custom text-center p-4 h-100">
+                        <img class="img-fluid rounded-circle mx-auto mb-3" src="img/maleicon.png" style="width: 120px; height: 120px; object-fit: cover;" alt="Chaplain of Kyang'ondu Secondary School, Rev. James Kilinda">
+                        <h5 class="fw-bold mb-1">Rev. James Kilinda</h5>
+                        <p class="text-primary fw-semibold small mb-0">Chaplain</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -476,44 +467,46 @@
                 <h2 class="fw-bold text-dark mt-2">Testimonials from Parents, Students & Alumni</h2>
             </div>
             
-            <div class="owl-carousel testimonial-carousel">
-                <div class="card-custom bg-white p-4 h-100 d-flex flex-column justify-content-between">
-                    <p class="text-muted fst-italic mb-4">"The teachers genuinely care about each student’s growth — academically and morally at Kyang'ondu Secondary School.”</p>
-                    <div class="d-flex align-items-center gap-3">
-                        <img class="img-fluid rounded-circle" src="img/unisexicon.png" style="width: 50px; height: 50px;" alt="Parent Testimonial Icon">
-                        <div>
-                            <h6 class="fw-bold mb-0">Mr. Musyoki</h6>
-                            <small class="text-muted">Parent</small>
+            <div class="carousel-wrapper">
+                <div class="owl-carousel testimonial-carousel">
+                    <div class="card-custom p-4 h-100 d-flex flex-column justify-content-between">
+                        <p class="text-muted fst-italic mb-4">"The teachers genuinely care about each student’s growth — academically and morally at Kyang'ondu Secondary School.”</p>
+                        <div class="d-flex align-items-center gap-3">
+                            <img class="img-fluid rounded-circle" src="img/unisexicon.png" style="width: 50px; height: 50px;" alt="Parent Testimonial Icon">
+                            <div>
+                                <h6 class="fw-bold mb-0">Mr. Musyoki</h6>
+                                <small class="text-muted">Parent</small>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card-custom bg-white p-4 h-100 d-flex flex-column justify-content-between">
-                    <p class="text-muted fst-italic mb-4">"We’re proud of the lasting impact our school has on families where students grow, and parents find a trusted partner."</p>
-                    <div class="d-flex align-items-center gap-3">
-                        <img class="img-fluid rounded-circle" src="img/unisexicon.png" style="width: 50px; height: 50px;" alt="Parent Testimonial Icon">
-                        <div>
-                            <h6 class="fw-bold mb-0">Mrs. Nzilani</h6>
-                            <small class="text-muted">Parent</small>
+                    <div class="card-custom p-4 h-100 d-flex flex-column justify-content-between">
+                        <p class="text-muted fst-italic mb-4">"We’re proud of the lasting impact our school has on families where students grow, and parents find a trusted partner."</p>
+                        <div class="d-flex align-items-center gap-3">
+                            <img class="img-fluid rounded-circle" src="img/unisexicon.png" style="width: 50px; height: 50px;" alt="Parent Testimonial Icon">
+                            <div>
+                                <h6 class="fw-bold mb-0">Mrs. Nzilani</h6>
+                                <small class="text-muted">Parent</small>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card-custom bg-white p-4 h-100 d-flex flex-column justify-content-between">
-                    <p class="text-muted fst-italic mb-4">"The school has helped me discover my talents and work hard toward my dreams. I love the supportive teachers!"</p>
-                    <div class="d-flex align-items-center gap-3">
-                        <img class="img-fluid rounded-circle" src="img/unisexicon.png" style="width: 50px; height: 50px;" alt="Student Testimonial Icon">
-                        <div>
-                            <h6 class="fw-bold mb-0">Mary N.</h6>
-                            <small class="text-muted">Student</small>
+                    <div class="card-custom p-4 h-100 d-flex flex-column justify-content-between">
+                        <p class="text-muted fst-italic mb-4">"The school has helped me discover my talents and work hard toward my dreams. I love the supportive teachers!"</p>
+                        <div class="d-flex align-items-center gap-3">
+                            <img class="img-fluid rounded-circle" src="img/unisexicon.png" style="width: 50px; height: 50px;" alt="Student Testimonial Icon">
+                            <div>
+                                <h6 class="fw-bold mb-0">Mary N.</h6>
+                                <small class="text-muted">Student</small>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card-custom bg-white p-4 h-100 d-flex flex-column justify-content-between">
-                    <p class="text-muted fst-italic mb-4">"From a shy student to a confident engineer, my Kyang'ondu teachers believed in me continuously."</p>
-                    <div class="d-flex align-items-center gap-3">
-                        <img class="img-fluid rounded-circle" src="img/unisexicon.png" style="width: 50px; height: 50px;" alt="Alumni Testimonial Icon">
-                        <div>
-                            <h6 class="fw-bold mb-0">James K.</h6>
-                            <small class="text-muted">Alumni</small>
+                    <div class="card-custom p-4 h-100 d-flex flex-column justify-content-between">
+                        <p class="text-muted fst-italic mb-4">"From a shy student to a confident engineer, my Kyang'ondu teachers believed in me continuously."</p>
+                        <div class="d-flex align-items-center gap-3">
+                            <img class="img-fluid rounded-circle" src="img/unisexicon.png" style="width: 50px; height: 50px;" alt="Alumni Testimonial Icon">
+                            <div>
+                                <h6 class="fw-bold mb-0">James K.</h6>
+                                <small class="text-muted">Alumni</small>
+                            </div>
                         </div>
                     </div>
                 </div>
